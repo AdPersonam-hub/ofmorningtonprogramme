@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Of Mornington | Online Programme</title>
+  <style>
+    :root {--bg:#111;--panel:#1a1a1a;--text:#f5f2ea;--muted:#c8c1b5;--accent:#c9a86a;--line:rgba(255,255,255,0.12);--max:1040px}
+    *{box-sizing:border-box} html{scroll-behavior:smooth}
+    body{margin:0;font-family:Georgia,"Times New Roman",serif;background:var(--bg);color:var(--text);line-height:1.65}
+    a{color:var(--accent)} img{max-width:100%;display:block}
+    .hero{min-height:72vh;display:grid;place-items:end start;background:linear-gradient(rgba(0,0,0,.56),rgba(0,0,0,.76)),url('hero-bg.jpg') center/cover no-repeat;padding:3rem 1.25rem;border-bottom:1px solid var(--line)}
+    .hero-inner,.wrap{width:100%;max-width:var(--max);margin:0 auto}
+    .eyebrow{text-transform:uppercase;letter-spacing:.2em;color:var(--muted);font-size:.8rem;margin-bottom:.75rem}
+    h1{margin:0;font-size:clamp(2.3rem,7vw,4.9rem);line-height:.95;max-width:10ch}
+    .subtitle{margin-top:1rem;font-size:1.2rem;color:var(--muted)}
+    .dates{margin-top:1.25rem;display:grid;gap:.55rem;font-size:1rem}
+    nav{position:sticky;top:0;z-index:20;background:rgba(14,14,14,.92);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+    .nav-inner{max-width:var(--max);margin:0 auto;padding:.9rem 1rem;display:flex;gap:1rem;overflow-x:auto;white-space:nowrap}
+    .nav-inner a{text-decoration:none;color:var(--muted);font-size:.95rem}
+    .nav-inner a:hover{color:var(--text)}
+    main{padding:2rem 1rem 5rem}
+    section{max-width:var(--max);margin:0 auto 1.5rem;padding:1.4rem;background:var(--panel);border:1px solid var(--line);border-radius:22px}
+    h2{margin-top:0;font-size:1.6rem;color:var(--accent)}
+    h3{margin-bottom:.35rem;font-size:1.08rem}
+    p{margin:0 0 1rem}
+    .grid{display:grid;grid-template-columns:repeat(12,1fr);gap:1.25rem}
+    .col-7{grid-column:span 7}.col-5{grid-column:span 5}.col-6{grid-column:span 6}
+    .card{padding:1rem;border:1px solid var(--line);border-radius:18px;background:rgba(255,255,255,.02)}
+    .image-slot{border-radius:18px;overflow:hidden;border:1px solid var(--line)}
+    .credits{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:.75rem 1rem}
+    .thanks{display:grid;gap:.5rem;grid-template-columns:repeat(auto-fit,minmax(220px,1fr))}
+    footer{max-width:var(--max);margin:0 auto;padding:0 1rem 3rem;color:var(--muted);font-size:.95rem}
+    @media (max-width:820px){.col-7,.col-5,.col-6{grid-column:span 12}}
+  </style>
+</head>
+<body>
+  <header class="hero">
+    <div class="hero-inner">
+      <div class="eyebrow">Online Programme</div>
+      <h1>‘Of Mornington’</h1>
+      <div class="subtitle">By Billy Roche</div>
+      <div class="dates">
+        <div><strong>Wexford Arts Centre</strong> — April 2–4 2026, 7.30pm and 2.30pm Saturday, April 4 2026</div>
+        <div><strong>Dublin Municipal Theatre at Smock Alley</strong> — April 14–18 2026, 7.30pm</div>
+      </div>
+    </div>
+  </header>
+
+  <nav>
+    <div class="nav-inner">
+      <a href="#gallery">Gallery</a>
+      <a href="#directors-notes">Director’s Notes</a>
+      <a href="#writers-notes">Writers notes</a>
+      <a href="#cast-creatives">Cast & Creatives</a>
+      <a href="#links">Links</a>
+    </div>
+  </nav>
+
+  <main>
+    <section id="gallery">
+      <h2>Production Gallery</h2>
+      <div class="grid">
+        <div class="col-6 image-slot"><img src="2.jpg" alt="Of Mornington title image"></div>
+        <div class="col-6 image-slot"><img src="Gary Lydon and Billy Roche (3) OF MORNINGTON photo by Sasha Bratkova.jpg" alt="Gary and Billy"></div>
+        <div class="col-6 image-slot"><img src="rehearsal room 5.jpeg" alt="Rehearsal"></div>
+        <div class="col-6 image-slot"><img src="Rehearsal room 2.jpeg" alt="Rehearsal"></div>
+      </div>
+    </section>
+
+    <section id="directors-notes">
+      <div class="grid">
+        <div class="col-7">
+          <h2>DIRECTOR’S NOTES</h2>
+          <p><em>Of Mornington by Billy Roche</em></p>
+          <p>We tell ourselves stories to survive. Stories about who we were, who we are, and who we might still become. Of Mornington lives in the space between those stories — and the truth.</p>
+          <p>This is a play about belief, identity, and the quiet, stubborn need for connection. However self-contained we appear, we are not built to endure alone. We need other people — to witness us, to challenge us, to keep us from disappearing into our own myths.</p>
+          <p>Set in a small-town café, three lives collide at a moment of reckoning...</p>
+          <p><strong>Peter McCamley.</strong></p>
+        </div>
+        <div class="col-5 image-slot"><img src="gary.jpg" alt="Gary Lydon"></div>
+      </div>
+    </section>
+
+    <section id="writers-notes">
+      <div class="grid">
+        <div class="col-5 image-slot"><img src="billy.webp" alt="Billy Roche"></div>
+        <div class="col-7">
+          <h2>Writers notes</h2>
+          <p>‘That play is not earning its keep,’ my mother once said to me...</p>
+          <p><strong>Billy Roche.</strong><br/>April 2026.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="cast-creatives">
+      <h2>Cast & Creatives</h2>
+      <div class="grid">
+        <div class="col-6 card">
+          <h3>Gary Lydon</h3>
+          <div class="image-slot"><img src="gary.jpg"></div>
+        </div>
+        <div class="col-6 card">
+          <h3>James Doherty O’Brien</h3>
+          <div class="image-slot"><img src="James Doherty O'Brien Headshot.jpg"></div>
+        </div>
+        <div class="col-6 card">
+          <h3>Síofra O’Meara</h3>
+          <div class="image-slot"><img src="Siofra O'Meara headshot.jpg"></div>
+        </div>
+        <div class="col-6 card">
+          <h3>Peter McCamley</h3>
+          <div class="image-slot"><img src="2.jpg"></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="links">
+      <h2>Links</h2>
+      <p><a href="https://adpersonam-hub.github.io/ad-personam/" target="_blank">Ad Personam Website</a></p>
+      <p><a href="https://adpersonam-hub.github.io/peter-mccamley-portfolio/" target="_blank">Peter McCamley Portfolio</a></p>
+    </section>
+
+    <section>
+      <h2>Crew Credits</h2>
+      <div class="credits">
+        <div>Stage Manager — Carol Stacey</div>
+        <div>Set Design — Mark Redmond</div>
+        <div>Lighting Design — Cian Redmond</div>
+        <div>Sound Design — Terry Byrne</div>
+        <div>Costume design — Aileen Donohoe</div>
+        <div>Communications — Elizabeth Rose Browne</div>
+        <div>Photography — Sasha Bratkova</div>
+      </div>
+    </section>
+
+    <section id="thanks">
+      <h2>With thanks to</h2>
+      <div class="thanks">
+        <div>Eoin Colfer</div>
+        <div>Councillor Lisa McDonald</div>
+        <div>Fitzgeralds Menswear Wexford</div>
+        <div>Councillor Catherine ‘Biddy’ Walsh</div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>Online programme for Of Mornington.</p>
+  </footer>
+</body>
+</html>
