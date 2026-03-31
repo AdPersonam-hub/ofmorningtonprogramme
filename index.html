@@ -5,33 +5,187 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Of Mornington | Online Programme</title>
   <style>
-    :root {--bg:#111;--panel:#1a1a1a;--text:#f5f2ea;--muted:#c8c1b5;--accent:#c9a86a;--line:rgba(255,255,255,0.12);--max:1040px}
-    *{box-sizing:border-box} html{scroll-behavior:smooth}
-    body{margin:0;font-family:Georgia,"Times New Roman",serif;background:var(--bg);color:var(--text);line-height:1.65}
-    a{color:var(--accent)} img{max-width:100%;display:block}
-    .hero{min-height:72vh;display:grid;place-items:end start;background:linear-gradient(rgba(0,0,0,.56),rgba(0,0,0,.76)),url('hero-bg.jpg') center/cover no-repeat;padding:3rem 1.25rem;border-bottom:1px solid var(--line)}
-    .hero-inner,.wrap{width:100%;max-width:var(--max);margin:0 auto}
-    .eyebrow{text-transform:uppercase;letter-spacing:.2em;color:var(--muted);font-size:.8rem;margin-bottom:.75rem}
-    h1{margin:0;font-size:clamp(2.3rem,7vw,4.9rem);line-height:.95;max-width:10ch}
-    .subtitle{margin-top:1rem;font-size:1.2rem;color:var(--muted)}
-    .dates{margin-top:1.25rem;display:grid;gap:.55rem;font-size:1rem}
-    nav{position:sticky;top:0;z-index:20;background:rgba(14,14,14,.92);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
-    .nav-inner{max-width:var(--max);margin:0 auto;padding:.9rem 1rem;display:flex;gap:1rem;overflow-x:auto;white-space:nowrap}
-    .nav-inner a{text-decoration:none;color:var(--muted);font-size:.95rem}
-    .nav-inner a:hover{color:var(--text)}
-    main{padding:2rem 1rem 5rem}
-    section{max-width:var(--max);margin:0 auto 1.5rem;padding:1.4rem;background:var(--panel);border:1px solid var(--line);border-radius:22px}
-    h2{margin-top:0;font-size:1.6rem;color:var(--accent)}
-    h3{margin-bottom:.35rem;font-size:1.08rem}
-    p{margin:0 0 1rem}
-    .grid{display:grid;grid-template-columns:repeat(12,1fr);gap:1.25rem}
-    .col-7{grid-column:span 7}.col-5{grid-column:span 5}.col-6{grid-column:span 6}
-    .card{padding:1rem;border:1px solid var(--line);border-radius:18px;background:rgba(255,255,255,.02)}
-    .image-slot{border-radius:18px;overflow:hidden;border:1px solid var(--line)}
-    .credits{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:.75rem 1rem}
-    .thanks{display:grid;gap:.5rem;grid-template-columns:repeat(auto-fit,minmax(220px,1fr))}
-    footer{max-width:var(--max);margin:0 auto;padding:0 1rem 3rem;color:var(--muted);font-size:.95rem}
-    @media (max-width:820px){.col-7,.col-5,.col-6{grid-column:span 12}}
+    :root {
+      --bg: #111111;
+      --panel: #1a1a1a;
+      --panel-2: #161616;
+      --text: #f5f2ea;
+      --muted: #c8c1b5;
+      --accent: #c9a86a;
+      --line: rgba(255,255,255,0.12);
+      --max: 1120px;
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      font-family: Georgia, "Times New Roman", serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.7;
+    }
+    a { color: var(--accent); }
+    img { display: block; width: 100%; height: auto; }
+    .hero {
+      min-height: 78vh;
+      display: grid;
+      place-items: end start;
+      background:
+        linear-gradient(rgba(0,0,0,0.48), rgba(0,0,0,0.78)),
+        url('hero-bg.jpg') center/cover no-repeat;
+      border-bottom: 1px solid var(--line);
+      padding: 3rem 1.25rem;
+    }
+    .hero-inner, .wrap {
+      width: 100%;
+      max-width: var(--max);
+      margin: 0 auto;
+    }
+    .eyebrow {
+      text-transform: uppercase;
+      letter-spacing: .18em;
+      color: var(--muted);
+      font-size: .82rem;
+      margin-bottom: .8rem;
+    }
+    h1 {
+      margin: 0;
+      font-size: clamp(2.5rem, 7vw, 5.5rem);
+      line-height: .95;
+      max-width: 10ch;
+    }
+    .subtitle {
+      margin-top: 1rem;
+      font-size: 1.25rem;
+      color: var(--muted);
+    }
+    .dates {
+      margin-top: 1.25rem;
+      display: grid;
+      gap: .55rem;
+      font-size: 1rem;
+      max-width: 54rem;
+    }
+    .running-time {
+      margin-top: 1rem;
+      display: inline-block;
+      padding: .7rem 1rem;
+      border-radius: 999px;
+      background: rgba(255,255,255,.06);
+      border: 1px solid var(--line);
+      font-size: .96rem;
+    }
+    nav {
+      position: sticky;
+      top: 0;
+      z-index: 30;
+      background: rgba(14,14,14,.94);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--line);
+    }
+    .nav-inner {
+      max-width: var(--max);
+      margin: 0 auto;
+      padding: .9rem 1rem;
+      display: flex;
+      gap: 1rem;
+      overflow-x: auto;
+      white-space: nowrap;
+    }
+    .nav-inner a {
+      text-decoration: none;
+      color: var(--muted);
+      font-size: .95rem;
+    }
+    .nav-inner a:hover { color: var(--text); }
+    main { padding: 2rem 1rem 5rem; }
+    section {
+      max-width: var(--max);
+      margin: 0 auto 1.5rem;
+      padding: 1.5rem;
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: 24px;
+      box-shadow: 0 12px 32px rgba(0,0,0,.22);
+    }
+    h2 {
+      margin: 0 0 1rem;
+      font-size: 1.65rem;
+      line-height: 1.1;
+      color: var(--accent);
+    }
+    h3 {
+      margin: 0 0 .6rem;
+      font-size: 1.15rem;
+      color: var(--text);
+    }
+    p { margin: 0 0 1rem; }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(12, 1fr);
+      gap: 1.25rem;
+    }
+    .col-12 { grid-column: span 12; }
+    .col-8 { grid-column: span 8; }
+    .col-7 { grid-column: span 7; }
+    .col-6 { grid-column: span 6; }
+    .col-5 { grid-column: span 5; }
+    .col-4 { grid-column: span 4; }
+    .card {
+      padding: 1rem;
+      border-radius: 18px;
+      border: 1px solid var(--line);
+      background: var(--panel-2);
+      height: 100%;
+    }
+    .image-card {
+      border-radius: 18px;
+      overflow: hidden;
+      border: 1px solid var(--line);
+      background: #0c0c0c;
+    }
+    .image-card figcaption {
+      padding: .8rem .95rem;
+      color: var(--muted);
+      font-size: .92rem;
+      border-top: 1px solid var(--line);
+    }
+    .image-card img.portrait {
+      aspect-ratio: 4/5;
+      object-fit: cover;
+    }
+    .image-card img.landscape {
+      aspect-ratio: 16/9;
+      object-fit: cover;
+    }
+    .credits {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+      gap: .8rem 1rem;
+    }
+    .credit-item {
+      padding: .8rem .95rem;
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      background: rgba(255,255,255,.02);
+    }
+    .link-box {
+      padding: 1rem;
+      border-radius: 18px;
+      border: 1px solid var(--line);
+      background: rgba(255,255,255,.03);
+    }
+    footer {
+      max-width: var(--max);
+      margin: 0 auto;
+      padding: 0 1rem 3rem;
+      color: var(--muted);
+      font-size: .95rem;
+    }
+    @media (max-width: 900px) {
+      .col-8, .col-7, .col-6, .col-5, .col-4 { grid-column: span 12; }
+      section { padding: 1.2rem; }
+    }
   </style>
 </head>
 <body>
@@ -41,9 +195,10 @@
       <h1>‘Of Mornington’</h1>
       <div class="subtitle">By Billy Roche</div>
       <div class="dates">
-        <div><strong>Wexford Arts Centre</strong> — April 2–4 2026, 7.30pm and 2.30pm Saturday, April 4 2026</div>
-        <div><strong>Dublin Municipal Theatre at Smock Alley</strong> — April 14–18 2026, 7.30pm</div>
+        <div><strong>Wexford Arts Centre</strong><br />April 2-4 2026 7.30pm and 2.30pm Saturday, April 4 2026</div>
+        <div><strong>Dublin Municipal Theatre at Smock Alley</strong><br />April 14-18 2026 7.30pm</div>
       </div>
+      <div class="running-time"><strong>Running time:</strong> 1 hour and 55 minutes including an interval.</div>
     </div>
   </header>
 
@@ -52,8 +207,15 @@
       <a href="#gallery">Gallery</a>
       <a href="#directors-notes">Director’s Notes</a>
       <a href="#writers-notes">Writers notes</a>
-      <a href="#cast-creatives">Cast & Creatives</a>
+      <a href="#billy-roche">Billy Roche</a>
+      <a href="#gary-lydon">Gary Lydon</a>
+      <a href="#james">James Doherty O’Brien</a>
+      <a href="#siofra">Síofra O’Meara</a>
+      <a href="#peter">Peter McCamley</a>
+      <a href="#crew">Crew</a>
+      <a href="#ad-personam">Ad Personam</a>
       <a href="#links">Links</a>
+      <a href="#thanks">With thanks</a>
     </div>
   </nav>
 
@@ -61,92 +223,180 @@
     <section id="gallery">
       <h2>Production Gallery</h2>
       <div class="grid">
-        <div class="col-6 image-slot"><img src="2.jpg" alt="Of Mornington title image"></div>
-        <div class="col-6 image-slot"><img src="Gary Lydon and Billy Roche (3) OF MORNINGTON photo by Sasha Bratkova.jpg" alt="Gary and Billy"></div>
-        <div class="col-6 image-slot"><img src="rehearsal room 5.jpeg" alt="Rehearsal"></div>
-        <div class="col-6 image-slot"><img src="Rehearsal room 2.jpeg" alt="Rehearsal"></div>
+        <figure class="col-6 image-card">
+          <img class="landscape" src="2.jpg" alt="Of Mornington title image" />
+          <figcaption>Of Mornington title image</figcaption>
+        </figure>
+        <figure class="col-6 image-card">
+          <img class="landscape" src="Gary Lydon and Billy Roche (3) OF MORNINGTON photo by Sasha Bratkova.jpg" alt="Gary Lydon and Billy Roche" />
+          <figcaption>Gary Lydon and Billy Roche</figcaption>
+        </figure>
+        <figure class="col-6 image-card">
+          <img class="landscape" src="rehearsal room 5.jpeg" alt="Of Mornington rehearsal image" />
+          <figcaption>Rehearsal image</figcaption>
+        </figure>
+        <figure class="col-6 image-card">
+          <img class="landscape" src="Rehearsal room 2.jpeg" alt="Of Mornington rehearsal image" />
+          <figcaption>Rehearsal image</figcaption>
+        </figure>
       </div>
     </section>
 
     <section id="directors-notes">
       <div class="grid">
-        <div class="col-7">
+        <div class="col-8">
           <h2>DIRECTOR’S NOTES</h2>
-          <p><em>Of Mornington by Billy Roche</em></p>
+          <p><strong>Of Mornington by Billy Roche</strong></p>
           <p>We tell ourselves stories to survive. Stories about who we were, who we are, and who we might still become. Of Mornington lives in the space between those stories — and the truth.</p>
           <p>This is a play about belief, identity, and the quiet, stubborn need for connection. However self-contained we appear, we are not built to endure alone. We need other people — to witness us, to challenge us, to keep us from disappearing into our own myths.</p>
-          <p>Set in a small-town café, three lives collide at a moment of reckoning...</p>
+          <p>Set in a small-town café, three lives collide at a moment of reckoning. Each is searching for something — recognition, stability, meaning — and each resists the very connection that might offer it. What unfolds is a darkly funny, deeply human portrait of people caught between who they’ve been and who they might yet be.</p>
+          <p>This production embraces the play’s restraint. It is actor-led, allowing tension to surface through silence, proximity, and what remains unsaid. The café becomes both refuge and pressure point — a shared space where small shifts carry real consequence, and where connection hovers, just within reach.</p>
+          <p>Billy Roche’s writing is grounded in a deep trust in actors and in the fragile, vital connections between people. My own journey with Billy began ten years ago when he took a chance on me — as he has done for so many Wexford actors, including Gary Lydon, Aidan Gillen, and Dermot Murphy. Without that belief, I would not be writing these words.</p>
+          <p>I remain profoundly grateful for his generosity, and for the trust that continues to shape this work.</p>
           <p><strong>Peter McCamley.</strong></p>
         </div>
-        <div class="col-5 image-slot"><img src="gary.jpg" alt="Gary Lydon"></div>
+        <figure class="col-4 image-card">
+          <img class="portrait" src="hero-bg.jpg" alt="Peter McCamley" />
+          <figcaption>Peter McCamley</figcaption>
+        </figure>
       </div>
     </section>
 
     <section id="writers-notes">
       <div class="grid">
-        <div class="col-5 image-slot"><img src="billy.webp" alt="Billy Roche"></div>
-        <div class="col-7">
+        <figure class="col-4 image-card">
+          <img class="portrait" src="billy.webp" alt="Billy Roche" />
+          <figcaption>Billy Roche</figcaption>
+        </figure>
+        <div class="col-8">
           <h2>Writers notes</h2>
-          <p>‘That play is not earning its keep,’ my mother once said to me...</p>
-          <p><strong>Billy Roche.</strong><br/>April 2026.</p>
+          <p>‘That play is not earning its keep,’ my mother once said to me. ‘You need to roll up your sleeves and move it forward on the shelf,’ she said as if I was running a little corner shop full of plays. ‘THE WEXFORD TRILOGY, ‘she emphasised,’ doesn’t owe you anything, but as for that other yoke…. No, it’s not earning its keep.’ (She was talking about AMPHIBIANS which had just premiered at the RSC but hadn’t had an Irish production yet; and yes, I did, I rolled up my sleeves and made it happen.)</p>
+          <p>‘OF MORNINGTON- my rarely performed, neglected play- is not earning its keep,’ I said to myself one dreary day as my mother’s loving, heavenly voice rang in my ears; and that’s what propelled me to send the play to Gary Lydon whose company Gary Lydon Productions set up a rehearsed reading in the Dock Art Centre in Carrig-on- Shannon. And- in short- that is what has led us all here. Ad Personam came on board to co-produce and Peter McCamley stepped up to the plate to direct and, leaving out – sparing you- the slog of what it takes to get a production up on its feet, here we are.</p>
+          <p>And what about OF MORNINGTON, what’s it made of? Well, you take a pinch of salt (the Greek myth of Philoctetes), a little hint of pepper (the western SHANE); add a spoonful of vinegar (Paul Newman’s The Hustler) and temper it all with the poetic anger and energy of punk (Johnny Rotten/ Ian Dury), and you more or less have it - my carefully constructed handy little three hander which would surely set my mother scratching her head in wonder at its lack of earning power ( yes, the phrase’ earning its keep’ should be taken literally.) Vinegar was my mother’s secret ingredient when she made her much-loved toffee apples (it binds the toffee together she said); Salt and pepper were seldom put on the table because they were already included in the cooking; Punk? (give me some credit). Speaking of salt and pepper and, indeed, vinegar: James Doherty O Brien and Siofra O Meara join Gary Lydon in the cast of three. Who is the salt and who is the pepper? I'll leave that to you. The vinegar is another matter!</p>
+          <p>And so, to conclude, I have moved the product from the shelf to the counter, within arm’s reach you might say; all you have to do now is just… pick it up and eat it!</p>
+          <p><strong>Billy Roche.</strong><br />April 2026.</p>
         </div>
       </div>
     </section>
 
-    <section id="cast-creatives">
-      <h2>Cast & Creatives</h2>
+    <section id="billy-roche">
       <div class="grid">
-        <div class="col-6 card">
-          <h3>Gary Lydon</h3>
-          <div class="image-slot"><img src="gary.jpg"></div>
+        <div class="col-8">
+          <h2>About Billy Roche</h2>
+          <p>Billy Roche is best known for his stage plays The Wexford Trilogy, Amphibians, On Such As We, The Cavalcaders and Lay Me Down Softly along with the film Trojan Eddie, the novel Tumbling Down, his acclaimed collection of short stories Tales From Rainwater Pond and the RTE four part series CLEAN BREAK. He is a member of Aosdana.</p>
+          <p>Billy Roche's first novel, Tumbling Down, was published in 1986. His first stage play, A Handful Of Stars, was staged at The Bush Theatre, London in 1988. This was followed by Poor Beast In The Rain in 1990. Belfry completed this powerful trilogy for the Bush Theatre. All three plays, directed by Robin Le Fevre, became known as the Wexford Trilogy and were performed in their entirety at The Bush, the Peacock and the Theatre Royal, Wexford, now the National Opera House, Wexford. Later the Wexford Trilogy was filmed for the B.B.C. His fourth play Amphibians was commissioned by the Royal Shakespeare Company. This was followed by The Cavalcaders at The Peacock and Royal Court, London.</p>
+          <p>He wrote the screenplay for Trojan Eddie, which was directed by Gillies MacKinnon and starred Stephen Rea and Richard Harris. On Such As We was performed at the Peacock in 2001. Tales From Rainwater Pond, his collection of short stories was published by Pillar Press in 2006. Lay Me Down Softly, his 7th play, was originally performed at the Peacock Theatre in 2008, directed by Wilson Milam. A Love Like That was produced by Decadent Theatre at The National Opera House, Wexford and The Civic Theatre, Dublin. Billy’s plays are published by Nick Hern Books.</p>
+          <p>The Eclipse, a film that was co-written with Conor McPherson won an IFTA Award for Best Screenplay and Best Film, directed by Conor McPherson. The film is inspired by Billy’s short story Table Manners (from the Tales From Rainwater Pond collection). His short novella The Diary Of Maynard Perdu was performed on stage by Peter McCamley at the Wexford Arts Centre, the Mill Theatre and Smock Alley, Dublin. He wrote the screenplay Clean Break for RTE television.</p>
+          <p>His plays are constantly revised and reproduced - Lay Me Down Softly (The Tricycle Theatre, London and The Seanachai Theatre, Chicago). The Cavalcaders (Druid); On Such As We (Decadent Theatre); A Handful Of Stars (Four Rivers Theatre). Billy Roche is a member of Aosdana.</p>
         </div>
-        <div class="col-6 card">
-          <h3>James Doherty O’Brien</h3>
-          <div class="image-slot"><img src="James Doherty O'Brien Headshot.jpg"></div>
-        </div>
-        <div class="col-6 card">
-          <h3>Síofra O’Meara</h3>
-          <div class="image-slot"><img src="Siofra O'Meara headshot.jpg"></div>
-        </div>
-        <div class="col-6 card">
-          <h3>Peter McCamley</h3>
-          <div class="image-slot"><img src="2.jpg"></div>
-        </div>
+        <figure class="col-4 image-card">
+          <img class="portrait" src="billy.webp" alt="Billy Roche headshot" />
+          <figcaption>Billy Roche</figcaption>
+        </figure>
       </div>
+    </section>
+
+    <section id="gary-lydon">
+      <div class="grid">
+        <div class="col-8">
+          <h2>About Gary Lydon</h2>
+          <p>Gary has a long association with Billy Roche, appearing in many of his plays, including A Handful of Stars, Poor Beast in the Rain, Belfry, The Cavalcaders and Lay Me Down Softly (all world premieres). Other theatre credits include Hangmen, The Pillowman, The Weir and Borstal Boy (Gaiety Theatre), Playboy of The Western World (Old Vic and Druid), Waiting For Godot (Gare St. Lazare), The Cripple of Inishmann (National Theatre, London); Drumbelly, The House, Translations, A Whistle in The Dark (Abbey Theatre), Sive and Tinker's Wedding/Well of the Saints (Druid).</p>
+          <p>Gary will be seen later this year playing Elvis impersonator Gerry Byrne in the upcoming feature film One Sweet Hour, written by Eugene O'Brien and directed by Declan Recks, produced by Samson Films. Other screen credits include Trespasses (Channel 4), Bodkin( Netflix), The Banshees of Inisherin, Lakelands, Barber, Broken Law, The Guard, Calvary, Pure Mule and The Clinic.</p>
+          <p>Gary's production credits through his company, Gary Lydon Productions, include his own adaptation of A Christmas Carol, which he also directed; a Halloween Tour of Carrick on Shannon, and public rehearsed readings of Of Mornington, Mountain Outta Mohill, The Monday Boy and Lakes (all Dock Arts Centre).</p>
+        </div>
+        <figure class="col-4 image-card">
+          <img class="portrait" src="gary.jpg" alt="Gary Lydon" />
+          <figcaption>Gary Lydon</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section id="james">
+      <div class="grid">
+        <div class="col-8">
+          <h2>About James Doherty O’Brien</h2>
+          <p>Mike will be played by James Doherty O'Brien. James is a Theatre Studies and English Literature graduate from Trinity College, Dublin, and has appeared in numerous productions as part of his studies. He played Des in the acclaimed production of A Whistle in the Dark by Tom Murphy at the Abbey Theatre, starring Sean McGinley and Brian Gleeson. James wrote, directed, produced, and performed the lead role in his one-person show, Your Heart is an Empty Room, as part of the Scene + Heard Festival 2025 at Smock Alley Theatre, and later at The Dock in Carrick-on-Shannon. He is also an accomplished guitarist, singer, and songwriter, and a former member of the rock band The Flies. His screen credits include the film Lakelands and the AMC series Moonhaven, which recently landed on Netflix.</p>
+        </div>
+        <figure class="col-4 image-card">
+          <img class="portrait" src="James Doherty O'Brien Headshot.jpg" alt="James Doherty O’Brien" />
+          <figcaption>James Doherty O’Brien</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section id="siofra">
+      <div class="grid">
+        <div class="col-8">
+          <h2>About Siofra O’Meara</h2>
+          <p>Síofra O’Meara is a Dublin-based actor and writer. She recently wrapped on short film Bean directed by Hiram Harrington which will premiere in 2026. Her recent credits include Lesbian Lines, directed by Cara Holmes and produced by Keeper Pictures, and Blister, which she also wrote. Blister was directed by Simon Geaney at Project Arts Centre following its critically acclaimed run at Dublin Fringe.</p>
+          <p>Additional credits include Hand of God by Carly MaGee, Efficacy 84 by Luke Casserly, It Folds by Broken Talkers and JunkEnsemble, and Go Home, produced by Pale Rebel Productions. Síofra is currently developing the feature film Come and Be a Winner, produced by Deal Productions and Keeper Pictures, funded by Screen Ireland and the Luxembourg FilmFund, with a director to be announced.</p>
+        </div>
+        <figure class="col-4 image-card">
+          <img class="portrait" src="Siofra O'Meara headshot.jpg" alt="Síofra O’Meara" />
+          <figcaption>Síofra O’Meara</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section id="peter">
+      <div class="grid">
+        <div class="col-8">
+          <h2>About Peter McCamley</h2>
+          <p>Peter is a theatre director, producer, actor, and educator with over 23 years of experience in the performing arts. Co-founder of Menapia Theatre Company and Ad Personam Cultural Events Ltd, he has created numerous productions and cultural festivals across Ireland and the UK, including the Castle-Lake Arts Festival (Johnstown Castle Estate), Billy Roche's The Diary of Maynard Perdu, and the ongoing Christmas by Candlelight series produced by Lyric Opera.</p>
+          <p>His directing work includes Shakespeare's The Tempest, Twelfth Night, and A Midsummer Night's Dream, alongside contemporary pieces by David Mamet, Oscar Wilde, and Ariel Dorfman at American College Dublin. Peter has also directed for Dublin City Council's Opera in the Open and served as actor trainer for Wexford Festival Opera.</p>
+          <p>As a performer, recent credits include Puck in A Midsummer Night's Dream (Wexford Festival Opera 2025), Maynard Perdu in The Diary of Maynard Perdu (Smock Alley Theatre), Captain Von Trapp in The Sound of Music (National Concert Hall), and roles in Wexford Festival Opera's Impossible Interviews series.</p>
+          <p>Other notable work includes Ariel in the Royal Shakespeare Company's Prospero's Journey and performing with the Blueman Group in New York. Peter holds an MFA in Performance (First Class Honours) from American College Dublin and a BA Hons in Acting from Rose Bruford College. He trained at Stratford-Upon-Avon College in collaboration with the Royal Shakespeare Company and studied Method Acting in London. Currently, he lectures in Acting and Theatre at American College Dublin and works as a teaching artist with Music Generation Wexford, continuing to foster artistic excellence across performance and education.</p>
+        </div>
+        <figure class="col-4 image-card">
+          <img class="portrait" src="hero-bg.jpg" alt="Peter McCamley" />
+          <figcaption>Peter McCamley</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section id="crew">
+      <h2>Crew Credits:</h2>
+      <div class="credits">
+        <div class="credit-item">Stage Manager Carol Stacey</div>
+        <div class="credit-item">Set Design Mark Redmond</div>
+        <div class="credit-item">Lighting Design Cian Redmond</div>
+        <div class="credit-item">Sound Design Terry Byrne</div>
+        <div class="credit-item">Costume design Aileen Donohoe</div>
+        <div class="credit-item">Communications Elizabeth Rose Browne</div>
+        <div class="credit-item">Photography Sasha Bratkova</div>
+      </div>
+    </section>
+
+    <section id="ad-personam">
+      <h2>About Ad Personum</h2>
+      <p>Ad Personam Cultural Events Ltd is a Wexford-based arts organisation co-founded by theatre director, producers, and educators Peter and Aileen McCamley. The company creates and produces high-quality theatre, music, and interdisciplinary cultural events that combine professional artistic practice with strong community engagement.</p>
+      <p>Ad Personam’s work includes the Castle-Lake Arts Festival (2021), theatre productions such as A Midsummer Night’s Dream (2021) and By Billy Roche (2022), the short film Sequah by Billy Roche (2023), and the ongoing Christmas by Candlelight series. The company has also produced large-scale public and community events including BarnFest at St Mary’s GAA (2022), Bealtaine Festival Wexford (2023–2024), Murrintown Christmas Festival and Specials (2021–2025), and Filling the Well for Rosslare Strand Culture Night (2024–2025).</p>
+      <p>In 2023, Ad Personam produced The Rosslare Song Project in partnership with Cruinniú na nÓg Wexford, alongside an extensive programme of collaborative work with Music Generation Wexford, including Everyone (2024), La/Oíche at Ceilúradh, Fleadh Cheoil na hÉireann (2024), Music Generation Educators Day – We Are Music Generation (2025), Bí Ann at Fleadh Cheoil na hÉireann (2025), and Back to the Festival (2025), an interactive music experience for young people created as part of Wexford Festival Opera.</p>
+      <p>The company’s mission is to produce artistically ambitious, accessible work that places professional artists at the heart of communities, creating meaningful cultural experiences that are rooted in place while engaging with universal themes.</p>
     </section>
 
     <section id="links">
       <h2>Links</h2>
-      <p><a href="https://adpersonam-hub.github.io/ad-personam/" target="_blank">Ad Personam Website</a></p>
-      <p><a href="https://adpersonam-hub.github.io/peter-mccamley-portfolio/" target="_blank">Peter McCamley Portfolio</a></p>
-    </section>
-
-    <section>
-      <h2>Crew Credits</h2>
-      <div class="credits">
-        <div>Stage Manager — Carol Stacey</div>
-        <div>Set Design — Mark Redmond</div>
-        <div>Lighting Design — Cian Redmond</div>
-        <div>Sound Design — Terry Byrne</div>
-        <div>Costume design — Aileen Donohoe</div>
-        <div>Communications — Elizabeth Rose Browne</div>
-        <div>Photography — Sasha Bratkova</div>
+      <div class="grid">
+        <div class="col-6 link-box">
+          <h3>Ad Personam Website</h3>
+          <p><a href="https://adpersonam-hub.github.io/ad-personam/" target="_blank">adpersonam-hub.github.io/ad-personam/</a></p>
+        </div>
+        <div class="col-6 link-box">
+          <h3>Peter McCamley Website</h3>
+          <p><a href="https://adpersonam-hub.github.io/peter-mccamley-portfolio/" target="_blank">adpersonam-hub.github.io/peter-mccamley-portfolio/</a></p>
+        </div>
       </div>
     </section>
 
     <section id="thanks">
-      <h2>With thanks to</h2>
-      <div class="thanks">
-        <div>Eoin Colfer</div>
-        <div>Councillor Lisa McDonald</div>
-        <div>Fitzgeralds Menswear Wexford</div>
-        <div>Councillor Catherine ‘Biddy’ Walsh</div>
-      </div>
+      <h2>With thanks to:</h2>
+      <p>Eoin Colfer, Councillor Lisa McDonald, Fitzgeralds Menswear Wexford, Councillor Catherine ‘Biddy’ Walsh., Rosemary Hartigan, Elizabeth Rose Browne, Elizabeth Whyte.</p>
     </section>
   </main>
 
   <footer>
-    <p>Online programme for Of Mornington.</p>
+    <p>Online programme for <em>Of Mornington</em>.</p>
   </footer>
 </body>
 </html>
