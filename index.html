@@ -47,26 +47,27 @@
       margin: 0 auto;
     }
 
-    .presented-by {
-      text-transform: uppercase;
-      letter-spacing: 0.12em;
-      color: var(--muted);
-      font-size: 0.8rem;
-      margin-bottom: 1rem;
-    }
+  .presented-by {
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+  color: var(--muted);
+  font-size: 0.95rem;
+  margin-bottom: 1.1rem;
+}
 
     h1 {
-      margin: 0;
-      font-size: clamp(2.7rem, 7vw, 5.9rem);
-      line-height: 0.94;
-      max-width: 10ch;
-    }
+  margin: 0;
+  font-size: clamp(3.4rem, 8vw, 6.8rem);
+  line-height: 0.92;
+  max-width: 10ch;
+  letter-spacing: -0.02em;
+}
 
     .subtitle {
-      margin-top: 0.9rem;
-      font-size: 1.28rem;
-      color: var(--muted);
-    }
+  margin-top: 1rem;
+  font-size: 1.45rem;
+  color: var(--muted);
+}
 
     .dates {
       margin-top: 1.2rem;
@@ -189,18 +190,39 @@
       font-size: 0.92rem;
     }
 
-    .credits {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 0.8rem 1rem;
-    }
+   .credits-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.9rem;
+}
 
-    .credit-item {
-      padding: 0.85rem 0.95rem;
-      border-radius: 14px;
-      border: 1px solid var(--line);
-      background: rgba(255,255,255,0.03);
-    }
+.credit-item {
+  padding: 1rem 1.1rem;
+  border-radius: 16px;
+  border: 1px solid var(--line);
+  background: rgba(255,255,255,0.03);
+}
+
+.credit-role {
+  display: block;
+  font-size: 0.82rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--muted);
+  margin-bottom: 0.3rem;
+}
+
+.credit-name {
+  display: block;
+  font-size: 1.05rem;
+  color: var(--text);
+}
+
+@media (max-width: 920px) {
+  .credits-grid {
+    grid-template-columns: 1fr;
+  }
+}
 
     .link-box {
       padding: 1rem;
@@ -250,7 +272,7 @@
 <body>
   <header class="hero">
     <div class="hero-inner">
-      <div class="presented-by">Ad Personam Cultural Events LTD and Gary Lydon Productions Presents:</div>
+      <div class="presented-by">Ad Personam Cultural Events Ltd and Gary Lydon Productions present</div>
       <h1>‘Of Mornington’</h1>
       <div class="subtitle">By Billy Roche</div>
       <div class="dates">
@@ -404,18 +426,52 @@
       </div>
     </section>
 
-    <section id="crew">
-      <h2>Crew Credits:</h2>
-      <div class="credits">
- <div class="credit-item">Producers Aileen Donohoe Peter McCamley Gary Lydon</div>
-        <div class="credit-item">Stage Manager Carol Stacey</div>
-        <div class="credit-item">Set Design Mark Redmond</div>
-        <div class="credit-item">Lighting Design Cian Redmond</div>
-        <div class="credit-item">Sound Design Terry Byrne</div>
-        <div class="credit-item">Communications Elizabeth Rose Browne</div>
-        <div class="credit-item">Photography Sasha Bratkova</div>
-      </div>
-    </section>
+   <section id="crew">
+  <h2>Crew Credits</h2>
+  <div class="credits-grid">
+
+    <div class="credit-item">
+      <span class="credit-role">Producers</span>
+      <span class="credit-name">Aileen Donohoe, Peter McCamley, Gary Lydon</span>
+    </div>
+
+    <div class="credit-item">
+      <span class="credit-role">Stage Manager</span>
+      <span class="credit-name">Carol Stacey</span>
+    </div>
+
+    <div class="credit-item">
+      <span class="credit-role">Set Design</span>
+      <span class="credit-name">Mark Redmond</span>
+    </div>
+
+    <div class="credit-item">
+      <span class="credit-role">Lighting Design</span>
+      <span class="credit-name">Cian Redmond</span>
+    </div>
+
+    <div class="credit-item">
+      <span class="credit-role">Lighting Operator</span>
+      <span class="credit-name">Sarah Doyle</span>
+    </div>
+
+    <div class="credit-item">
+      <span class="credit-role">Sound Design</span>
+      <span class="credit-name">Terry Byrne</span>
+    </div>
+
+    <div class="credit-item">
+      <span class="credit-role">Communications</span>
+      <span class="credit-name">Elizabeth Rose-Browne</span>
+    </div>
+
+    <div class="credit-item">
+      <span class="credit-role">Photography</span>
+      <span class="credit-name">Sasha Bratkova</span>
+    </div>
+
+  </div>
+</section>
 
     <section id="ad-personam">
       <div class="grid">
