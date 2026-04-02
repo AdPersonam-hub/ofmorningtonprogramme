@@ -247,23 +247,24 @@
       gap: 1rem;
       align-items: center;
     }
+.logo-card {
+  background: white;
+  border-radius: 16px;
+  padding: 20px;
+  height: 140px;              /* fixed height for consistency */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid rgba(0,0,0,0.08);
+}
 
-    .logo-card {
-      background: white;
-      border-radius: 16px;
-      padding: 1rem;
-      min-height: 120px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      border: 1px solid rgba(0,0,0,0.08);
-    }
-
-    .logo-card img {
-      max-height: 90px;
-      width: auto;
-      object-fit: contain;
-    }
+.logo-card img {
+  max-width: 100%;
+  max-height: 100%;
+  width: auto;
+  height: auto;
+  object-fit: contain;       /* THIS is the key */
+}
 
     footer {
       max-width: var(--max);
