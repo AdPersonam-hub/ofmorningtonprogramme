@@ -4,24 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Of Mornington | Online Programme</title>
-  <style>u
-.adp-box {
-  background: #ffffff;
-  border-radius: 18px;
-  padding: 18px;
-  min-height: 180px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.adp-logo {
-  width: 100%;
-  max-width: 220px;
-  max-height: 110px;
-  object-fit: contain;
-}
-}
+  <style>
     :root {
       --bg: #0f0f10;
       --panel: #171718;
@@ -35,6 +18,7 @@
 
     * { box-sizing: border-box; }
     html { scroll-behavior: smooth; }
+
     body {
       margin: 0;
       font-family: Georgia, "Times New Roman", serif;
@@ -64,27 +48,27 @@
       margin: 0 auto;
     }
 
-  .presented-by {
-  text-transform: uppercase;
-  letter-spacing: 0.16em;
-  color: var(--muted);
-  font-size: 0.95rem;
-  margin-bottom: 1.1rem;
-}
+    .presented-by {
+      text-transform: uppercase;
+      letter-spacing: 0.16em;
+      color: var(--muted);
+      font-size: 0.95rem;
+      margin-bottom: 1.1rem;
+    }
 
     h1 {
-  margin: 0;
-  font-size: clamp(3.4rem, 8vw, 6.8rem);
-  line-height: 0.92;
-  max-width: 10ch;
-  letter-spacing: -0.02em;
-}
+      margin: 0;
+      font-size: clamp(3.4rem, 8vw, 6.8rem);
+      line-height: 0.92;
+      max-width: 10ch;
+      letter-spacing: -0.02em;
+    }
 
     .subtitle {
-  margin-top: 1rem;
-  font-size: 1.45rem;
-  color: var(--muted);
-}
+      margin-top: 1rem;
+      font-size: 1.45rem;
+      color: var(--muted);
+    }
 
     .dates {
       margin-top: 1.2rem;
@@ -166,19 +150,8 @@
 
     .col-12 { grid-column: span 12; }
     .col-8 { grid-column: span 8; }
-    .col-7 { grid-column: span 7; }
     .col-6 { grid-column: span 6; }
-    .col-5 { grid-column: span 5; }
     .col-4 { grid-column: span 4; }
-    .col-3 { grid-column: span 3; }
-
-    .card {
-      padding: 1rem;
-      border-radius: 18px;
-      border: 1px solid var(--line);
-      background: var(--panel-2);
-      height: 100%;
-    }
 
     .image-card {
       border-radius: 18px;
@@ -207,39 +180,33 @@
       font-size: 0.92rem;
     }
 
-   .credits-grid {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 0.9rem;
-}
+    .credits-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 0.9rem;
+    }
 
-.credit-item {
-  padding: 1rem 1.1rem;
-  border-radius: 16px;
-  border: 1px solid var(--line);
-  background: rgba(255,255,255,0.03);
-}
+    .credit-item {
+      padding: 1rem 1.1rem;
+      border-radius: 16px;
+      border: 1px solid var(--line);
+      background: rgba(255,255,255,0.03);
+    }
 
-.credit-role {
-  display: block;
-  font-size: 0.82rem;
-  text-transform: uppercase;
-  letter-spacing: 0.08em;
-  color: var(--muted);
-  margin-bottom: 0.3rem;
-}
+    .credit-role {
+      display: block;
+      font-size: 0.82rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--muted);
+      margin-bottom: 0.3rem;
+    }
 
-.credit-name {
-  display: block;
-  font-size: 1.05rem;
-  color: var(--text);
-}
-
-@media (max-width: 920px) {
-  .credits-grid {
-    grid-template-columns: 1fr;
-  }
-}
+    .credit-name {
+      display: block;
+      font-size: 1.05rem;
+      color: var(--text);
+    }
 
     .link-box {
       padding: 1rem;
@@ -248,31 +215,76 @@
       background: rgba(255,255,255,0.03);
     }
 
-    .logos {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-      gap: 1rem;
+    .adp-box {
+      background: #ffffff;
+      border-radius: 18px;
+      padding: 18px;
+      min-height: 180px;
+      display: flex;
       align-items: center;
+      justify-content: center;
     }
-    
-.logo-card {
-  background: white;
-  border-radius: 16px;
-  padding: 20px;
-  height: 140px;              /* fixed height for consistency */
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border: 1px solid rgba(0,0,0,0.08);
-}
 
-.logo-card img {
-  max-width: 100%;
-  max-height: 100%;
-  width: auto;
-  height: auto;
-  object-fit: contain;       /* THIS is the key */
-}
+    .adp-logo {
+      width: 100%;
+      max-width: 220px;
+      max-height: 110px;
+      object-fit: contain;
+    }
+
+    .thanks-box {
+      padding: 1.25rem;
+      border-radius: 18px;
+      border: 1px solid var(--line);
+      background: linear-gradient(to bottom right, rgba(255,255,255,0.04), rgba(255,255,255,0.02));
+    }
+
+    .thanks-intro {
+      color: var(--muted);
+      margin-bottom: 1rem;
+      font-size: 0.98rem;
+    }
+
+    .thanks-list {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 0.7rem 1rem;
+    }
+
+    .thanks-name {
+      padding: 0.7rem 0.85rem;
+      border-radius: 14px;
+      background: rgba(255,255,255,0.03);
+      border: 1px solid var(--line);
+    }
+
+    .logos {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      gap: 25px;
+      margin-top: 20px;
+    }
+
+    .logos img {
+      max-height: 60px;
+      object-fit: contain;
+    }
+
+    .logo-box {
+      background: #ffffff;
+      padding: 12px 18px;
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .logo-box img {
+      max-height: 50px;
+      object-fit: contain;
+    }
 
     footer {
       max-width: var(--max);
@@ -283,37 +295,11 @@
     }
 
     @media (max-width: 920px) {
-      .col-8, .col-7, .col-6, .col-5, .col-4, .col-3 { grid-column: span 12; }
+      .col-8, .col-6, .col-4 { grid-column: span 12; }
+      .credits-grid,
+      .thanks-list { grid-template-columns: 1fr; }
       section { padding: 1.2rem; }
-    }/* LOGOS SECTION */
-.logos {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-  gap: 25px;
-  margin-top: 20px;
-}
-
-.logos img {
-  max-height: 60px;
-  object-fit: contain;
-}
-
-/* Sasha logo box */
-.logo-box {
-  background: #ffffff;
-  padding: 12px 18px;
-  border-radius: 8px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.logo-box img {
-  max-height: 50px;
-  object-fit: contain;
-}
+    }
   </style>
 </head>
 <body>
@@ -336,86 +322,88 @@
       <a href="#directors-notes">Director’s Notes</a>
       <a href="#writers-notes">Writers notes</a>
       <a href="#billy-roche">Billy Roche</a>
+      <a href="#peter">Peter McCamley</a>
       <a href="#gary-lydon">Gary Lydon</a>
       <a href="#james">James Doherty O’Brien</a>
       <a href="#siofra">Síofra O’Meara</a>
-      <a href="#peter">Peter McCamley</a>
       <a href="#crew">Crew</a>
       <a href="#ad-personam">Ad Personam</a>
       <a href="#links">Links</a>
-      <a href="#thanks">With thanks</a>
+      <a href="#thanks">With Thanks</a>
       <a href="#supporters">Supporters</a>
     </div>
   </nav>
 
   <main>
-    <<section id="gallery">
-  <h2>Gallery</h2>
-  <div class="grid">
+    <section id="gallery">
+      <h2>Gallery</h2>
+      <div class="grid">
+        <figure class="col-4 image-card">
+          <img class="landscape" src="gary-billy.jpg" alt="Gary Lydon and Billy Roche" />
+          <figcaption>Gary and Billy</figcaption>
+        </figure>
 
-    <!-- Current -->
-    <figure class="col-4 image-card">
-      <img class="landscape" src="gary-billy.jpg" alt="Gary Lydon and Billy Roche" />
-      <figcaption>Gary and Billy </figcaption>
-    </figure>
+        <figure class="col-4 image-card">
+          <img class="landscape" src="rehearsal-1.jpg" alt="Rehearsal image" />
+          <figcaption>Rehearsal</figcaption>
+        </figure>
 
-    <figure class="col-4 image-card">
-      <img class="landscape" src="rehearsal-1.jpg" alt="Rehearsal image" />
-      <figcaption>Rehearsal</figcaption>
-    </figure>
+        <figure class="col-4 image-card">
+          <img class="landscape" src="rehearsal-2.jpg" alt="Rehearsal image" />
+          <figcaption>Rehearsal</figcaption>
+        </figure>
 
-    <figure class="col-4 image-card">
-      <img class="landscape" src="rehearsal-2.jpg" alt="Rehearsal image" />
-      <figcaption>Rehearsal</figcaption>
-    </figure>
+        <figure class="col-4 image-card">
+          <img class="landscape" src="rehearsal-3.jpg" alt="Rehearsal room" />
+          <figcaption>Rehearsal</figcaption>
+        </figure>
 
-    <!-- NEW IMAGES -->
+        <figure class="col-4 image-card">
+          <img class="landscape" src="gary-billy-pete.jpg" alt="Gary Lydon, Billy Roche and Peter McCamley" />
+          <figcaption>Gary, Billy and Peter</figcaption>
+        </figure>
 
-    <figure class="col-4 image-card">
-      <img class="landscape" src="rehearsal-3.jpg" alt="Rehearsal room" />
-      <figcaption>Rehearsal</figcaption>
-    </figure>
+        <figure class="col-4 image-card">
+          <img class="landscape" src="rehearsal-4.jpg" alt="Rehearsal room" />
+          <figcaption>Rehearsal</figcaption>
+        </figure>
 
-    <figure class="col-4 image-card">
-      <img class="landscape" src="Gary Billy Pete.jpg" alt="Gary Billy Pete" />
-      <figcaption>Gary Billy Pete</figcaption>
-    </figure>
-    
-    <figure class="col-4 image-card">
-      <img class="landscape" src="rehearsal-4.jpg" alt="Rehearsal room" />
-      <figcaption>Rehearsal</figcaption>
-    </figure>
+        <figure class="col-4 image-card">
+          <img class="landscape" src="snooker-promo.jpg" alt="Pete at The Billiard Co, Dublin" />
+          <figcaption>Pete at The Billiard Co, Dublin</figcaption>
+        </figure>
 
-    <figure class="col-4 image-card">
-      <img class="landscape" src="snooker-promo.jpg" alt="Snooker image" />
-      <figcaption>Pete at The Billiard Co, Dublin</figcaption>
-    </figure>
+        <figure class="col-4 image-card">
+          <img class="landscape" src="gary-billy-1986.jpg" alt="Gary Lydon and Billy Roche, 1986" />
+          <figcaption>Gary Lydon and Billy Roche, 1986</figcaption>
+        </figure>
 
-    <figure class="col-4 image-card">
-      <img class="landscape" src="gary-billy-1986.jpg" alt="Gary and Billy 1986" />
-      <figcaption>Gary Lydon and Billy Roche, 1986</figcaption>
-    </figure>
+        <figure class="col-4 image-card">
+          <img class="landscape" src="gary-billy-80s.jpg" alt="Gary and Billy archive image" />
+          <figcaption>Gary and Billy (Archive)</figcaption>
+        </figure>
+      </div>
+    </section>
 
-    <figure class="col-4 image-card">
-      <img class="landscape" src="gary-billy-80s.jpg" alt="Gary and Billy archive" />
-      <figcaption>Gary and Billy (Archive)</figcaption>
-    </figure>
-
-  </div>
-</section>
+    <section id="directors-notes">
+      <h2>DIRECTOR’S NOTES</h2>
+      <p><strong>Of Mornington by Billy Roche</strong></p>
+      <p>We tell ourselves stories to survive. Stories about who we were, who we are, and who we might still become. Of Mornington lives in the space between those stories — and the truth.</p>
+      <p>This is a play about belief, identity, and the quiet, stubborn need for connection. However self-contained we appear, we are not built to endure alone. We need other people — to witness us, to challenge us, to keep us from disappearing into our own myths.</p>
+      <p>Set in a small-town café, three lives collide at a moment of reckoning. Each is searching for something — recognition, stability, meaning — and each resists the very connection that might offer it. What unfolds is a darkly funny, deeply human portrait of people caught between who they’ve been and who they might yet be.</p>
+      <p>This production embraces the play’s restraint. It is actor-led, allowing tension to surface through silence, proximity, and what remains unsaid. The café becomes both refuge and pressure point — a shared space where small shifts carry real consequence, and where connection hovers, just within reach.</p>
+      <p>Billy Roche’s writing is grounded in a deep trust in actors and in the fragile, vital connections between people. My own journey with Billy began ten years ago when he took a chance on me — as he has done for so many Wexford actors, including Gary Lydon, Aidan Gillen, and Dermot Murphy. Without that belief, I would not be writing these words.</p>
+      <p>I remain profoundly grateful for his generosity, and for the trust that continues to shape this work.</p>
+      <p><strong>Peter McCamley.</strong></p>
+    </section>
 
     <section id="writers-notes">
-      <div class="grid">
-        
-        <div class="col-8">
-          <h2>Writers notes</h2>
-          <p>‘That play is not earning its keep,’ my mother once said to me. ‘You need to roll up your sleeves and move it forward on the shelf,’ she said as if I was running a little corner shop full of plays. ‘THE WEXFORD TRILOGY, ‘she emphasised,’ doesn’t owe you anything, but as for that other yoke…. No, it’s not earning its keep.’ (She was talking about AMPHIBIANS which had just premiered at the RSC but hadn’t had an Irish production yet; and yes, I did, I rolled up my sleeves and made it happen.)</p>
-          <p>‘OF MORNINGTON- my rarely performed, neglected play- is not earning its keep,’ I said to myself one dreary day as my mother’s loving, heavenly voice rang in my ears; and that’s what propelled me to send the play to Gary Lydon whose company Gary Lydon Productions set up a rehearsed reading in the Dock Art Centre in Carrig-on- Shannon. And- in short- that is what has led us all here. Ad Personam came on board to co-produce and Peter McCamley stepped up to the plate to direct and, leaving out – sparing you- the slog of what it takes to get a production up on its feet, here we are.</p>
-          <p>And what about OF MORNINGTON, what’s it made of? Well, you take a pinch of salt (the Greek myth of Philoctetes), a little hint of pepper (the western SHANE); add a spoonful of vinegar (Paul Newman’s The Hustler) and temper it all with the poetic anger and energy of punk (Johnny Rotten/ Ian Dury), and you more or less have it - my carefully constructed handy little three hander which would surely set my mother scratching her head in wonder at its lack of earning power ( yes, the phrase’ earning its keep’ should be taken literally.) Vinegar was my mother’s secret ingredient when she made her much-loved toffee apples (it binds the toffee together she said); Salt and pepper were seldom put on the table because they were already included in the cooking; Punk? (give me some credit). Speaking of salt and pepper and, indeed, vinegar: James Doherty O Brien and Siofra O Meara join Gary Lydon in the cast of three. Who is the salt and who is the pepper? I'll leave that to you. The vinegar is another matter!</p>
-          <p>And so, to conclude, I have moved the product from the shelf to the counter, within arm’s reach you might say; all you have to do now is just… pick it up and eat it!</p>
-          <p><strong>Billy Roche.</strong><br />April 2026.</p>
-        </div>
-      </div>
+      <h2>Writers notes</h2>
+      <p>‘That play is not earning its keep,’ my mother once said to me. ‘You need to roll up your sleeves and move it forward on the shelf,’ she said as if I was running a little corner shop full of plays. ‘THE WEXFORD TRILOGY, ‘she emphasised,’ doesn’t owe you anything, but as for that other yoke…. No, it’s not earning its keep.’ (She was talking about AMPHIBIANS which had just premiered at the RSC but hadn’t had an Irish production yet; and yes, I did, I rolled up my sleeves and made it happen.)</p>
+      <p>‘OF MORNINGTON- my rarely performed, neglected play- is not earning its keep,’ I said to myself one dreary day as my mother’s loving, heavenly voice rang in my ears; and that’s what propelled me to send the play to Gary Lydon whose company Gary Lydon Productions set up a rehearsed reading in the Dock Art Centre in Carrig-on- Shannon. And- in short- that is what has led us all here. Ad Personam came on board to co-produce and Peter McCamley stepped up to the plate to direct and, leaving out – sparing you- the slog of what it takes to get a production up on its feet, here we are.</p>
+      <p>And what about OF MORNINGTON, what’s it made of? Well, you take a pinch of salt (the Greek myth of Philoctetes), a little hint of pepper (the western SHANE); add a spoonful of vinegar (Paul Newman’s The Hustler) and temper it all with the poetic anger and energy of punk (Johnny Rotten/ Ian Dury), and you more or less have it - my carefully constructed handy little three hander which would surely set my mother scratching her head in wonder at its lack of earning power ( yes, the phrase’ earning its keep’ should be taken literally.) Vinegar was my mother’s secret ingredient when she made her much-loved toffee apples (it binds the toffee together she said); Salt and pepper were seldom put on the table because they were already included in the cooking; Punk? (give me some credit). Speaking of salt and pepper and, indeed, vinegar: James Doherty O Brien and Siofra O Meara join Gary Lydon in the cast of three. Who is the salt and who is the pepper? I'll leave that to you. The vinegar is another matter!</p>
+      <p>And so, to conclude, I have moved the product from the shelf to the counter, within arm’s reach you might say; all you have to do now is just… pick it up and eat it!</p>
+      <p><strong>Billy Roche.</strong><br />April 2026.</p>
     </section>
 
     <section id="billy-roche">
@@ -434,6 +422,7 @@
         </figure>
       </div>
     </section>
+
     <section id="peter">
       <div class="grid">
         <div class="col-8">
@@ -441,7 +430,7 @@
           <p>Peter is a theatre director, producer, actor, and educator with over 23 years of experience in the performing arts. Co-founder of Menapia Theatre Company and Ad Personam Cultural Events Ltd, he has created numerous productions and cultural festivals across Ireland and the UK, including the Castle-Lake Arts Festival (Johnstown Castle Estate), Billy Roche's The Diary of Maynard Perdu, and the ongoing Christmas by Candlelight series produced by Lyric Opera.</p>
           <p>His directing work includes Shakespeare's The Tempest, Twelfth Night, and A Midsummer Night's Dream, alongside contemporary pieces by David Mamet, Oscar Wilde, and Ariel Dorfman at American College Dublin. Peter has also directed for Dublin City Council's Opera in the Open and served as actor trainer for Wexford Festival Opera.</p>
           <p>As a performer, recent credits include Puck in A Midsummer Night's Dream (Wexford Festival Opera 2025), Maynard Perdu in The Diary of Maynard Perdu (Smock Alley Theatre), Captain Von Trapp in The Sound of Music (National Concert Hall), and roles in Wexford Festival Opera's Impossible Interviews series.</p>
-          <p>Other notable work includes Ariel in the Royal Shakespeare Company's The Tempest, performing with the Blueman Group in New York, working with the acclaimed Irsih TV and Film director, wexfords Laura Way, and acting on RTE in Clean Sweep. Peter holds an MFA in Performance (First Class Honours) from American College Dublin and a BA Hons in Acting from Rose Bruford College. He trained at Stratford-Upon-Avon College in collaboration with the Royal Shakespeare Company and studied Method Acting in London. Peter has trained Actors from all ages and abilities including lecuturing in BA and MFA Performing Arts and Acting degrees, and Saturday moning Drama club. He also works as a teaching artist with Music Generation Wexford, continuing to foster artistic excellence across performance and education.</p>
+          <p>Other notable work includes Ariel in the Royal Shakespeare Company's The Tempest, performing with the Blueman Group in New York, working with the acclaimed Irish TV and film director Laura Way, and acting on RTÉ in Clean Sweep. Peter holds an MFA in Performance (First Class Honours) from American College Dublin and a BA Hons in Acting from Rose Bruford College. He trained at Stratford-Upon-Avon College in collaboration with the Royal Shakespeare Company and studied Method Acting in London. Peter has trained actors of all ages and abilities including lecturing in BA and MFA Performing Arts and Acting degrees and Saturday morning drama club. He also works as a teaching artist with Music Generation Wexford, continuing to foster artistic excellence across performance and education.</p>
         </div>
         <figure class="col-4 image-card">
           <img class="portrait" src="Peter McCamley.jpg" alt="Peter McCamley" />
@@ -449,12 +438,13 @@
         </figure>
       </div>
     </section>
+
     <section id="gary-lydon">
       <div class="grid">
         <div class="col-8">
           <h2>About Gary Lydon</h2>
           <p>Gary has a long association with Billy Roche, appearing in many of his plays, including A Handful of Stars, Poor Beast in the Rain, Belfry, The Cavalcaders and Lay Me Down Softly (all world premieres). Other theatre credits include Hangmen, The Pillowman, The Weir and Borstal Boy (Gaiety Theatre), Playboy of The Western World (Old Vic and Druid), Waiting For Godot (Gare St. Lazare), The Cripple of Inishmann (National Theatre, London); Drumbelly, The House, Translations, A Whistle in The Dark (Abbey Theatre), Sive and Tinker's Wedding/Well of the Saints (Druid).</p>
-          <p>Gary will be seen later this year playing Elvis impersonator Gerry Byrne in the upcoming feature film One Sweet Hour, written by Eugene O'Brien and directed by Declan Recks, produced by Samson Films. Other screen credits include Trespasses (Channel 4), Bodkin( Netflix), The Banshees of Inisherin, Lakelands, Barber, Broken Law, The Guard, Calvary, Pure Mule and The Clinic.</p>
+          <p>Gary will be seen later this year playing Elvis impersonator Gerry Byrne in the upcoming feature film One Sweet Hour, written by Eugene O'Brien and directed by Declan Recks, produced by Samson Films. Other screen credits include Trespasses (Channel 4), Bodkin (Netflix), The Banshees of Inisherin, Lakelands, Barber, Broken Law, The Guard, Calvary, Pure Mule and The Clinic.</p>
           <p>Gary's production credits through his company, Gary Lydon Productions, include his own adaptation of A Christmas Carol, which he also directed; a Halloween Tour of Carrick on Shannon, and public rehearsed readings of Of Mornington, Mountain Outta Mohill, The Monday Boy and Lakes (all Dock Arts Centre).</p>
         </div>
         <figure class="col-4 image-card">
@@ -491,75 +481,71 @@
       </div>
     </section>
 
+    <section id="crew">
+      <h2>Crew Credits</h2>
+      <div class="credits-grid">
+        <div class="credit-item">
+          <span class="credit-role">Producers</span>
+          <span class="credit-name">Aileen Donohoe, Peter McCamley, Gary Lydon</span>
+        </div>
 
+        <div class="credit-item">
+          <span class="credit-role">Stage Manager</span>
+          <span class="credit-name">Carol Stacey</span>
+        </div>
 
-   <section id="crew">
-  <h2>Crew Credits</h2>
-  <div class="credits-grid">
+        <div class="credit-item">
+          <span class="credit-role">Set Design</span>
+          <span class="credit-name">Mark Redmond</span>
+        </div>
 
-    <div class="credit-item">
-      <span class="credit-role">Producers</span>
-      <span class="credit-name">Aileen Donohoe, Peter McCamley, Gary Lydon</span>
-    </div>
+        <div class="credit-item">
+          <span class="credit-role">Lighting Design</span>
+          <span class="credit-name">Cian Redmond</span>
+        </div>
 
-    <div class="credit-item">
-      <span class="credit-role">Stage Manager</span>
-      <span class="credit-name">Carol Stacey</span>
-    </div>
+        <div class="credit-item">
+          <span class="credit-role">Lighting Operator</span>
+          <span class="credit-name">Sarah Doyle</span>
+        </div>
 
-    <div class="credit-item">
-      <span class="credit-role">Set Design</span>
-      <span class="credit-name">Mark Redmond</span>
-    </div>
+        <div class="credit-item">
+          <span class="credit-role">Sound Design</span>
+          <span class="credit-name">Terry Byrne</span>
+        </div>
 
-    <div class="credit-item">
-      <span class="credit-role">Lighting Design</span>
-      <span class="credit-name">Cian Redmond</span>
-    </div>
+        <div class="credit-item">
+          <span class="credit-role">Communications</span>
+          <span class="credit-name">Elizabeth Rose-Browne</span>
+        </div>
 
-    <div class="credit-item">
-      <span class="credit-role">Lighting Operator</span>
-      <span class="credit-name">Sarah Doyle</span>
-    </div>
-
-    <div class="credit-item">
-      <span class="credit-role">Sound Design</span>
-      <span class="credit-name">Terry Byrne</span>
-    </div>
-
-    <div class="credit-item">
-      <span class="credit-role">Communications</span>
-      <span class="credit-name">Elizabeth Rose-Browne</span>
-    </div>
-
-    <div class="credit-item">
-      <span class="credit-role">Photography</span>
-      <span class="credit-name">Sasha Bratkova</span>
-    </div>
-
-  </div>
-</section>
+        <div class="credit-item">
+          <span class="credit-role">Photography</span>
+          <span class="credit-name">Sasha Bratkova</span>
+        </div>
+      </div>
+    </section>
 
     <section id="ad-personam">
-  <div class="grid">
-    <div class="col-4">
-      <div class="adp-box">
-        <img class="adp-logo" src="ad-personam-logo.png" alt="Ad Personam logo">
+      <div class="grid">
+        <div class="col-4">
+          <div class="adp-box">
+            <img class="adp-logo" src="ad-personam-logo.png" alt="Ad Personam logo">
+          </div>
+        </div>
+
+        <div class="col-8">
+          <h2>About Ad Personam</h2>
+          <p>Ad Personam Cultural Events Ltd is a Wexford-based arts organisation co-founded by theatre director, producers, and educators Peter and Aileen McCamley. The company creates and produces high-quality theatre, music, and interdisciplinary cultural events that combine professional artistic practice with strong community engagement.</p>
+
+          <p>Ad Personam’s work includes the Castle-Lake Arts Festival (2021), theatre productions such as A Midsummer Night’s Dream (2021) and By Billy Roche (2022), the short film Sequah by Billy Roche (2023), and the ongoing Christmas by Candlelight series. The company has also produced large-scale public and community events including BarnFest at St Mary’s GAA (2022), Bealtaine Festival Wexford (2023–2024), Murrintown Christmas Festival and Specials (2021–2025), and Filling the Well for Rosslare Strand Culture Night (2024–2025).</p>
+
+          <p>In 2023, Ad Personam produced The Rosslare Song Project in partnership with Cruinniú na nÓg Wexford, alongside an extensive programme of collaborative work with Music Generation Wexford, including Everyone (2024), La/Oíche at Ceilúradh, Fleadh Cheoil na hÉireann (2024), Music Generation Educators Day – We Are Music Generation (2025), Bí Ann at Fleadh Cheoil na hÉireann (2025), and Back to the Festival (2025), an interactive music experience for young people created as part of Wexford Festival Opera.</p>
+
+          <p>The company’s mission is to produce artistically ambitious, accessible work that places professional artists at the heart of communities, creating meaningful cultural experiences that are rooted in place while engaging with universal themes.</p>
+        </div>
       </div>
-    </div>
-
-    <div class="col-8">
-      <h2>About Ad Personam</h2>
-      <p>Ad Personam Cultural Events Ltd is a Wexford-based arts organisation co-founded by theatre director, producers, and educators Peter and Aileen McCamley. The company creates and produces high-quality theatre, music, and interdisciplinary cultural events that combine professional artistic practice with strong community engagement.</p>
-
-      <p>Ad Personam’s work includes the Castle-Lake Arts Festival (2021), theatre productions such as A Midsummer Night’s Dream (2021) and By Billy Roche (2022), the short film Sequah by Billy Roche (2023), and the ongoing Christmas by Candlelight series. The company has also produced large-scale public and community events including BarnFest at St Mary’s GAA (2022), Bealtaine Festival Wexford (2023–2024), Murrintown Christmas Festival and Specials (2021–2025), and Filling the Well for Rosslare Strand Culture Night (2024–2025).</p>
-
-      <p>In 2023, Ad Personam produced The Rosslare Song Project in partnership with Cruinniú na nÓg Wexford, alongside an extensive programme of collaborative work with Music Generation Wexford, including Everyone (2024), La/Oíche at Ceilúradh, Fleadh Cheoil na hÉireann (2024), Music Generation Educators Day – We Are Music Generation (2025), Bí Ann at Fleadh Cheoil na hÉireann (2025), and Back to the Festival (2025), an interactive music experience for young people created as part of Wexford Festival Opera.</p>
-
-      <p>The company’s mission is to produce artistically ambitious, accessible work that places professional artists at the heart of communities, creating meaningful cultural experiences that are rooted in place while engaging with universal themes.</p>
-    </div>
-  </div>
-</section>
+    </section>
 
     <section id="links">
       <h2>Links</h2>
@@ -576,32 +562,38 @@
     </section>
 
     <section id="thanks">
-      <h2>With thanks to:</h2>
-      <p>Eoin Colfer, Councillor Lisa McDonald, Fitzgeralds Menswear Wexford, Councillor Catherine ‘Biddy’ Walsh, Rosemary Hartigan, Elizabeth Rose-Browne, Elizabeth Whyte and the staff at Wexford Arts Centre, Rocky and Amy in D'Lush Café. In kind support by Wexford County Council Arts Department in association with Wexford Arts Centre.</p>
+      <h2>With Thanks</h2>
+      <div class="thanks-box">
+        <p class="thanks-intro">Our sincere thanks to the following individuals and supporters for their generosity and support.</p>
+        <div class="thanks-list">
+          <div class="thanks-name">Eoin Colfer</div>
+          <div class="thanks-name">Councillor Lisa McDonald</div>
+          <div class="thanks-name">Fitzgeralds Menswear Wexford</div>
+          <div class="thanks-name">Councillor Catherine ‘Biddy’ Walsh</div>
+          <div class="thanks-name">Rosemary Hartigan</div>
+          <div class="thanks-name">Elizabeth Rose-Browne</div>
+          <div class="thanks-name">Elizabeth Whyte</div>
+          <div class="thanks-name">The staff at Wexford Arts Centre</div>
+          <div class="thanks-name">Rocky and Amy in D'Lush Café</div>
+          <div class="thanks-name">Wexford County Council Arts Department</div>
+        </div>
+      </div>
     </section>
 
     <section id="supporters">
-      <h2>Supporters & Partners</h2>
-    <section id="supporters">
-  <h2>With Thanks To</h2>
+      <h2>Supporters &amp; Partners</h2>
+      <div class="logos">
+        <img src="wexford-county-council.jpg" alt="Wexford County Council logo">
+        <img src="rosslare-municipal-district.jpg" alt="Rosslare Municipal District logo">
+        <img src="wexford-arts-centre.png" alt="Wexford Arts Centre logo">
 
-  <div class="logos">
+        <div class="logo-box">
+          <img src="sasha-bratkova-logo.png" alt="Sasha Bratkova Photography logo">
+        </div>
 
-    <img src="wexford-county-council.jpg" alt="Wexford County Council logo">
-
-    <img src="rosslare-municipal-district.jpg" alt="Rosslare Municipal District logo">
-
-    <img src="wexford-arts-centre.png" alt="Wexford Arts Centre logo">
-
-    <!-- Sasha logo in white box -->
-    <div class="logo-box">
-      <img src="sasha-bratkova-logo.png" alt="Sasha Bratkova Photography logo">
-    </div>
-
-    <img src="fitzgerald-menswear.png" alt="Fitzgerald Menswear logo">
-<img src="D'Lush-cafe-logo.jpg" alt="D'Lush Cafe logo Wexford Arts Centre">
-  </div>
-</section>
+        <img src="fitzgerald-menswear.png" alt="Fitzgerald Menswear logo">
+        <img src="dlush-cafe-logo.jpg" alt="D'Lush Café logo">
+      </div>
     </section>
   </main>
 
