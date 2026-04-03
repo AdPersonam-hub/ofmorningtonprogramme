@@ -170,7 +170,11 @@
       aspect-ratio: 16 / 9;
       object-fit: cover;
     }
-
+.image-card img.portrait {
+  width: 100%;
+  aspect-ratio: 3 / 4;
+  object-fit: cover;
+}
     .image-card figcaption {
       padding: 0.8rem 0.95rem;
       border-top: 1px solid var(--line);
@@ -353,7 +357,7 @@
         </figure>
 
         <figure class="col-4 image-card">
-          <img class="landscape" src="rehearsal-3.jpg" alt="Rehearsal room" />
+         <img class="portrait" src="rehearsal-3.jpg" alt="Rehearsal room" />
           <figcaption>Rehearsal</figcaption>
         </figure>
 
